@@ -57,6 +57,7 @@ import java.util.Collection;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Map;
+import java.util.ServiceLoader;
 
 /**
  * JsonProvider is the actual implementation of all the Json logic.
@@ -98,6 +99,10 @@ public abstract class JsonProvider {
             }
         } catch (final Throwable e) {
             // locator not available, try normal mode
+        }
+
+        for (final JsonProvider provider : ServiceLoader.load(JsonProvider.class)) {
+            return provider;
         }
 
         // don't use Class.forName() to avoid to bind class to tccl if thats a classloader facade
