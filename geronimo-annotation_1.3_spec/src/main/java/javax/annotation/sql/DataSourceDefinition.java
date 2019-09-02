@@ -22,6 +22,8 @@
 package javax.annotation.sql;
 
 import static java.lang.annotation.ElementType.TYPE;
+
+import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 import java.lang.annotation.Target;
@@ -31,6 +33,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RUNTIME)
 @Target({TYPE})
+@Repeatable(DataSourceDefinitions.class)
 public @interface DataSourceDefinition {
 
     boolean transactional() default true;

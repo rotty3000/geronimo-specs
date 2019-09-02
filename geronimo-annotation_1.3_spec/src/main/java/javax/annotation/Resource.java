@@ -24,6 +24,7 @@
 //
 package javax.annotation;
 
+import java.lang.annotation.Repeatable;
 import java.lang.annotation.Target;
 import java.lang.annotation.Retention;
 import java.lang.annotation.ElementType;
@@ -34,6 +35,7 @@ import java.lang.annotation.RetentionPolicy;
  */
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
+@Repeatable(Resources.class)
 public @interface Resource {
     enum AuthenticationType {
         CONTAINER,
