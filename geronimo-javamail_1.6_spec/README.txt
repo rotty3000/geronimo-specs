@@ -1,11 +1,10 @@
-JavaMail Specification 1.5
+JavaMail Specification 1.6
 ==========================
 
-These classes are based on the JavaMailTM API Design Specification Version 1.5 which can be found here:
-o https://javamail.java.net/nonav/docs/JavaMail-1.5.pdf
-o http://download.oracle.com/otn-pub/jcp/java_mail-1_5-mrel2-spec/javamail-1.5.0-javadocs.zip
+These classes are based on the JavaMailTM API Design Specification Version 1.6 which can be found here:
+o https://github.com/eclipse-ee4j/mail
 
-The classes represent the JavaMail API and contain implementations of the 
+The classes represent the JavaMail API and contain implementations of the
 classes found in the javax.mail packages. In order to function correctly,
 these classes require:
 
@@ -14,9 +13,9 @@ o J2SE 5.0/JDK 1.5 or newer
 o Implementations of the JavaMail providers to deal with pop/imap/etc.
   (You may use this with the geronimo-mail implementation or write your own)
 
-This contains no JavaDoc: see 
+This contains no JavaDoc: see
   https://java.net/projects/javamail/pages/Home
-  http://docs.oracle.com/javaee/7/api/
+  http://docs.oracle.com/javaee/8/api/
 
 for more information on how to use JavaMail to send messages.
 
