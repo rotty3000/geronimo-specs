@@ -78,6 +78,11 @@
                             <shadedArtifactAttached>true</shadedArtifactAttached>
                             <shadedClassifierName>jakarta</shadedClassifierName>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <artifactSet> <!-- don't include transitive deps -->
+                                <includes>
+                                    <include>${project.groupId}:${project.artifactId}</include>
+                                </includes>
+                            </artifactSet>
                             <relocations>
                                 <relocation>
                                     <pattern>javax</pattern>
